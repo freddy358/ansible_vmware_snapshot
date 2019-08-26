@@ -1,4 +1,12 @@
+
+
 ## Playboks for work with snapshoots
+
+After all we must install pyviomi module
+
+``` 
+pip install pyvmomi 
+```
 
 This playbooks help to us manipulate with shapshots
 * Create snapshot
