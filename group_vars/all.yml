@@ -1,0 +1,11 @@
+# Variables to for connect to vcenter
+
+
+username: username@domainname
+password: "password"
+hostname: vcenter's hostname or ip address
+datacenter: datacenter where machine placed
+folder: Machine's folder
+snap_name: snapshot's name
+snap_desc: short info
+

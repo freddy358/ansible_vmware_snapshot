@@ -1,0 +1,26 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    
+    - name: Revert a snapshot
+      vmware_guest_snapshot:
+        hostname: "{{ hostname }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        datacenter: "{{ datacenter }}"
+        folder: "{{ folder }}{{ item }}"
+        name: "{{ item }}"
+        validate_certs: False
+        state: revert
+        snapshot_name: "{{ snap_name }}"
+        description: "{{ snap_desc }}"
+
+      loop:
+        - "GuestMachine01"
+        - "GuestMachine02"
+        - "GuestMachine03"
+
+      delegate_to: localhost
